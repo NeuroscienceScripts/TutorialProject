@@ -31,43 +31,7 @@ public class MainController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // QualitySettings.vSyncCount = 1;
-        // Application.targetFrameRate = 60; 
-        
-        string path = Application.dataPath + Path.DirectorySeparatorChar + "data" + Path.DirectorySeparatorChar;
-        Debug.Log(path);
-        fileHandler.AppendLine(path + "myFile.txt", Variables.Instance.MyPublicInteger.ToString());
- 
-        fileHandler.AppendLine(path + "myFile.txt", Variables.Instance.GetMyPrivateInt().ToString()); 
-        //FileHandler.AppendLine(path + "myFile.txt", Variables.Instance.MyPublicInteger.ToString()); 
-        // fileHandler.AppendLine(path + "myFile.txt", "1"); 
-        fileHandler.RemoveLastLine(path + "myFile.txt", numLines: 4);
-
-        
-        // ClassExample myClassExample = new ClassExample(1, 1);
-        // ClassExample myCopyClassExample = myClassExample;
-        // myCopyClassExample.SetX(10);
-        // Debug.Log(myClassExample.GetX()); 
-        
-
-        // int x = 3;
-        // int y = x;
-        // Debug.Log(y);
-        // y = 5; 
-        // Debug.Log(x);
-        
-        StructExample myStructExample = new StructExample(1,1);
-        StructExample myCopyStructExample = myStructExample;   // It's treated like a primitive (int, char, etc)
-        myCopyStructExample.SetX(10);
-        Debug.Log(myCopyStructExample.GetX());  // The copy has been changed
-        Debug.Log(myStructExample.GetX());  // We did not change the original, kind of like how saying x = 3, y = x
-        
-        Debug.Log(Variables.Instance.MyPublicInteger);
-
-        int y = 4;
-        bool setZEqual3; 
-        int x = y > 3 ? (setZEqual3 ? 3 : 2) : 1; 
-        Debug.Log(x);
+       
 
     }
 
